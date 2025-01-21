@@ -9,6 +9,8 @@ GridWatch is a Python project designed to monitor and analyze vehicle counts acr
 - **Data Storage**: Stores collected data in a SQLite database for efficient retrieval and analysis.
 - **Data Analysis**: Processes and analyzes traffic data to identify patterns and trends and showcase in a streamlit application.
 
+Click the link to access the [Streamlit App](https://grid-watch.streamlit.app/).
+
 ---
 <p align="center">
   <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" width="70" height="50">
