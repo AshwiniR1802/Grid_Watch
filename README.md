@@ -11,6 +11,9 @@ GridWatch is a Python project designed to monitor and analyze vehicle counts acr
 
 Click the link to access the [Streamlit App](https://grid-watch.streamlit.app/).
 
+For a detailed analysis of all data, you can refer to the Jupyter Notebook hosted on Google Colab: [Analysis Notebook](https://colab.research.google.com/drive/1m6PqVNLpNoOQazR7ytzuBERv8995v8fg?usp=sharing)
+
+
 ---
 <p align="center">
   <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" width="70" height="50">
