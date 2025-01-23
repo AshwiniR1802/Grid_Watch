@@ -6,17 +6,16 @@ import folium
 from folium.plugins import MarkerCluster, HeatMap
 from streamlit_folium import st_folium
 
-# Page configuration
 st.set_page_config(page_title="GridWatch", layout="wide")
 
-# Function to query data
+
 def query_data(db_path, query):
     conn = sqlite3.connect(db_path)
     df = pd.read_sql_query(query, conn)
     conn.close()
     return df
 
-# Initialize session state
+
 if "data" not in st.session_state:
     st.session_state.data = None
 
@@ -26,7 +25,7 @@ if "filtered_data" not in st.session_state:
 if "unique_streets" not in st.session_state:
     st.session_state.unique_streets = None
 
-# Sidebar configuration
+
 st.sidebar.header("Dashboard Options")
 dashboard_mode = st.sidebar.selectbox("Choose Dashboard", options=["General Overview", "Detailed Analysis"])
 
@@ -45,7 +44,7 @@ if dashboard_mode == "General Overview":
     if st.session_state.data is not None:
         data = st.session_state.data
 
-        # Create two columns
+        
         col1, col2 = st.columns(2)
 
         with col1:
@@ -88,7 +87,7 @@ if dashboard_mode == "General Overview":
 
         st_folium(marker_map, width=800, height=500)
 
-        # Hourly Traffic Distribution
+        
         # st.subheader("Hourly Traffic Distribution for Top Streets")
         # top_streets_list = top_streets["street_name"].tolist()
         # hourly_distribution = data[data["street_name"].isin(top_streets_list)]
@@ -114,7 +113,7 @@ if dashboard_mode == "General Overview":
             y="count",
             title="Vehicle Count Distribution for Top Streets",
             labels={"street_name": "Street Name", "count": "Vehicle Count"},
-            points=False,  # Adds individual data points to the box plot
+            points=False, 
         )
 
         st.plotly_chart(fig_box_plot, use_container_width=True)
